@@ -26,45 +26,28 @@
   .dateline .side { font-size: 16px; font-weight: bold; color: #6d6455; letter-spacing: 1px; }
 
   /* ---------- lead story ---------- */
-  .lead { display: flex; gap: 26px; margin-top: 8px; }
-  .lead-visual { width: 452px; flex: none; }
-  .lead-visual .cap { font-size: 15.5px; font-weight: bold; letter-spacing: 1px; color: #4c463c; margin-top: 6px; text-align: center;}
-  .lead-text { flex: 1; }
+  .lead { margin-top: 9px; }
   .kicker { font-size: 19px; font-weight: bold; letter-spacing: 3px; color: #b3232a; }
-  .lead h1 { font-size: 40px; line-height: 1.08; font-weight: bold; margin-top: 5px; }
-  .lead .sub { font-size: 20.5px; line-height: 1.28; margin-top: 11px; color: #2c2822; }
-  .lead .sub b { color: #16130e; }
-
-  /* ---------- second row ---------- */
-  .row2 { display: flex; margin-top: 8px; border-top: 2.5px solid #16130e; padding-top: 10px; }
-  .panel { flex: 1; }
-  .panel + .panel { border-left: 1.5px solid #a99f8d; padding-left: 24px; margin-left: 24px; }
-  .panel .kicker { font-size: 16.5px; letter-spacing: 2.5px; }
-  .panel h2 { font-size: 27px; line-height: 1.12; margin-top: 5px; }
-  .panel .sub { font-size: 18.5px; line-height: 1.28; margin-top: 6px; color: #2c2822; }
-  .flags { display: flex; gap: 30px; margin: 4px 0 2px 6px; }
-  .flag { text-align: center; }
-  .flag .who { font-size: 15.5px; font-weight: bold; margin-top: 3px; letter-spacing: .5px; }
-
-  /* ---------- third row ---------- */
-  .row3 { display: flex; margin-top: 8px; border-top: 2.5px solid #16130e; padding-top: 9px; }
-  .cell { flex: 1; }
-  .cell + .cell { border-left: 1.5px solid #a99f8d; padding-left: 20px; margin-left: 20px; }
-  .cell .big { font-size: 40px; font-weight: bold; line-height: 1; }
-  .cell .big.red { color: #b3232a; }
-  .cell .big.navy { color: #16324f; }
-  .cell h3 { font-size: 20.5px; line-height: 1.15; margin-top: 6px; letter-spacing: .2px; }
-  .cell .sub { font-size: 17px; line-height: 1.27; margin-top: 5px; color: #2c2822; }
-
-  /* ---------- voyager strip ---------- */
-  .voyager {
-    margin-top: 8px; background: #101d2e; color: #f2ede1; border-radius: 6px;
-    display: flex; align-items: center; gap: 22px; padding: 8px 22px;
+  .lead h1 { font-size: 47px; line-height: 1.07; font-weight: bold; margin-top: 4px; }
+  .standfirst {
+    font-size: 19.5px; font-weight: bold; color: #2c2822;
+    white-space: nowrap; margin-top: 8px;
   }
-  .voyager h2 { font-size: 22px; letter-spacing: .4px; line-height: 1.15; }
-  .voyager .sub { font-size: 17px; margin-top: 4px; color: #cfd9e6; line-height: 1.3; }
+  .lead-map { margin-top: 8px; }
+  .map-cap { font-size: 15.5px; font-weight: bold; letter-spacing: 1.5px; color: #4c463c; margin-top: 5px; text-align: center; }
 
-  .footer { margin-top: 4px; text-align: center; font-size: 14.5px; color: #6d6455; letter-spacing: .6px; }
+  /* ---------- thumbnail grid ---------- */
+  .grid { margin-top: 8px; border-top: 3px solid #16130e; }
+  .grow { display: flex; padding-top: 8px; }
+  .grow + .grow { border-top: 1.5px solid #a99f8d; margin-top: 8px; }
+  .panel { flex: 1; }
+  .panel + .panel { border-left: 1.5px solid #a99f8d; padding-left: 20px; margin-left: 20px; }
+  .panel .kicker { font-size: 15.5px; letter-spacing: 2.5px; }
+  .panel .thumb { margin-top: 6px; }
+  .panel h2 { font-size: 23.5px; line-height: 1.13; font-weight: bold; margin-top: 7px; }
+  .panel .cap { font-size: 15.5px; font-weight: bold; color: #4c463c; margin-top: 4px; white-space: nowrap; }
+
+  .footer { margin-top: auto; padding-bottom: 7px; text-align: center; font-size: 14.5px; color: #6d6455; letter-spacing: .6px; }
 </style>
 </head>
 <body>
@@ -83,179 +66,220 @@
 
   <!-- ================= LEAD ================= -->
   <div class="lead">
-    <div class="lead-visual">
-      <svg width="452" height="170" viewBox="0 0 452 296">
+    <div class="kicker">GULF ESCALATION</div>
+    <h1 class="serif">U.S. Strikes Iran Missile Site; Iran Hits Back at U.S. Bases</h1>
+    <div class="standfirst">U.S. jets bomb a Guards missile site on Qeshm Island — Tehran's drones answer in Bahrain and Kuwait.</div>
+    <div class="lead-map">
+      <svg width="964" height="210" viewBox="0 0 964 210">
         <!-- sea -->
-        <rect x="0" y="0" width="452" height="296" rx="8" fill="#b9d0e2"/>
+        <rect x="0" y="0" width="964" height="210" rx="8" fill="#b9d0e2"/>
         <!-- Iran (north shore) -->
-        <path d="M0,0 L452,0 L452,44 C380,58 330,52 292,66 C250,81 218,74 176,86 C120,101 60,96 0,112 Z" fill="#e9dfc9"/>
+        <path d="M0,0 L964,0 L964,28 C830,40 730,34 640,44 C540,56 430,48 320,58 C200,68 90,64 0,74 Z" fill="#e9dfc9"/>
         <!-- Arabian peninsula (south shore) -->
-        <path d="M0,296 L0,196 C50,178 92,190 128,178 C170,164 196,182 236,196 C300,218 380,214 452,238 L452,296 Z" fill="#e9dfc9"/>
+        <path d="M0,210 L0,140 C110,122 200,134 290,124 C390,112 470,128 570,142 C700,158 850,152 964,170 L964,210 Z" fill="#e9dfc9"/>
         <!-- Gulf of Oman opening, right -->
-        <path d="M452,44 L452,238 C410,206 396,168 402,128 C406,94 428,64 452,44 Z" fill="#b9d0e2"/>
+        <path d="M964,28 L964,170 C918,146 902,114 910,82 C916,54 938,38 964,28 Z" fill="#b9d0e2"/>
         <!-- Qeshm Island -->
-        <ellipse cx="356" cy="128" rx="30" ry="10" fill="#d9c491" stroke="#8a7a4e" stroke-width="1.5" transform="rotate(-14 356 128)"/>
+        <ellipse cx="762" cy="86" rx="46" ry="13" fill="#d9c491" stroke="#8a7a4e" stroke-width="2" transform="rotate(-13 762 86)"/>
         <!-- place labels -->
-        <text x="120" y="42" font-size="21" font-weight="bold" fill="#4c463c" letter-spacing="3">I R A N</text>
-        <text x="60" y="262" font-size="19" font-weight="bold" fill="#4c463c" letter-spacing="2">SAUDI ARABIA</text>
-        <text x="120" y="150" font-size="17" font-weight="bold" fill="#33608c" letter-spacing="2">PERSIAN GULF</text>
-        <text x="330" y="196" font-size="16.5" font-weight="bold" fill="#33608c">STRAIT OF</text>
-        <text x="330" y="216" font-size="16.5" font-weight="bold" fill="#33608c">HORMUZ</text>
+        <text x="452" y="34" font-size="24" font-weight="bold" fill="#4c463c" letter-spacing="6">I R A N</text>
+        <text x="90" y="192" font-size="21" font-weight="bold" fill="#4c463c" letter-spacing="3">SAUDI ARABIA</text>
+        <text x="130" y="106" font-size="20" font-weight="bold" fill="#33608c" letter-spacing="3">PERSIAN GULF</text>
+        <text x="742" y="140" font-size="18" font-weight="bold" fill="#33608c">STRAIT OF</text>
+        <text x="742" y="160" font-size="18" font-weight="bold" fill="#33608c">HORMUZ</text>
         <!-- Kuwait + Bahrain dots -->
-        <circle cx="52" cy="158" r="6" fill="#16130e"/>
-        <text x="12" y="126" font-size="16" font-weight="bold" fill="#16130e">KUWAIT</text>
-        <circle cx="140" cy="196" r="6" fill="#16130e"/>
-        <text x="112" y="222" font-size="16" font-weight="bold" fill="#16130e">BAHRAIN</text>
+        <circle cx="82" cy="106" r="7.5" fill="#16130e"/>
+        <text x="30" y="82" font-size="18" font-weight="bold" fill="#16130e">KUWAIT</text>
+        <circle cx="238" cy="130" r="7.5" fill="#16130e"/>
+        <text x="204" y="156" font-size="18" font-weight="bold" fill="#16130e">BAHRAIN</text>
         <!-- US strike arrow (from the Gulf of Oman side) -->
-        <line x1="428" y1="98" x2="392" y2="118" stroke="#16324f" stroke-width="5"/>
-        <path d="M392,118 L404,106 L402,124 Z" fill="#16324f"/>
+        <line x1="922" y1="56" x2="840" y2="76" stroke="#16324f" stroke-width="6"/>
+        <path d="M840,76 L858,62 L856,84 Z" fill="#16324f"/>
         <!-- starburst on Qeshm -->
-        <g stroke="#b3232a" stroke-width="4" stroke-linecap="round">
-          <line x1="356" y1="100" x2="356" y2="156"/>
-          <line x1="328" y1="128" x2="384" y2="128"/>
-          <line x1="336" y1="108" x2="376" y2="148"/>
-          <line x1="376" y1="108" x2="336" y2="148"/>
+        <g stroke="#b3232a" stroke-width="5" stroke-linecap="round">
+          <line x1="762" y1="54" x2="762" y2="118"/>
+          <line x1="728" y1="86" x2="796" y2="86"/>
+          <line x1="739" y1="63" x2="785" y2="109"/>
+          <line x1="785" y1="63" x2="739" y2="109"/>
         </g>
-        <circle cx="356" cy="128" r="7" fill="#b3232a"/>
-        <text x="298" y="86" font-size="17" font-weight="bold" fill="#b3232a">QESHM ISLAND</text>
+        <circle cx="762" cy="86" r="8.5" fill="#b3232a"/>
+        <text x="664" y="46" font-size="19" font-weight="bold" fill="#b3232a">QESHM ISLAND</text>
         <!-- Iranian drone arrows to Bahrain & Kuwait -->
-        <path d="M300,96 C240,120 190,150 148,186" fill="none" stroke="#b3232a" stroke-width="4"/>
-        <path d="M148,186 L166,182 L156,168 Z" fill="#b3232a"/>
-        <path d="M250,84 C180,96 110,120 62,148" fill="none" stroke="#b3232a" stroke-width="4"/>
-        <path d="M62,148 L80,148 L68,132 Z" fill="#b3232a"/>
+        <path d="M664,64 C520,80 360,100 252,120" fill="none" stroke="#b3232a" stroke-width="5"/>
+        <path d="M252,120 L272,114 L260,98 Z" fill="#b3232a"/>
+        <path d="M604,52 C420,58 220,76 96,96" fill="none" stroke="#b3232a" stroke-width="5"/>
+        <path d="M96,96 L116,96 L104,78 Z" fill="#b3232a"/>
         <!-- legend -->
-        <line x1="14" y1="66" x2="44" y2="66" stroke="#16324f" stroke-width="5"/>
-        <text x="52" y="72" font-size="15.5" font-weight="bold" fill="#16324f">U.S. STRIKE</text>
-        <line x1="14" y1="90" x2="44" y2="90" stroke="#b3232a" stroke-width="4"/>
-        <text x="52" y="96" font-size="15.5" font-weight="bold" fill="#b3232a">IRANIAN DRONES</text>
+        <line x1="18" y1="36" x2="52" y2="36" stroke="#16324f" stroke-width="6"/>
+        <text x="60" y="43" font-size="16.5" font-weight="bold" fill="#16324f">U.S. STRIKE</text>
+        <line x1="18" y1="60" x2="52" y2="60" stroke="#b3232a" stroke-width="5"/>
+        <text x="60" y="67" font-size="16.5" font-weight="bold" fill="#b3232a">IRANIAN DRONES</text>
       </svg>
-      <div class="cap">THE STRAIT OF HORMUZ, GATEWAY TO THE GULF</div>
-    </div>
-    <div class="lead-text">
-      <div class="kicker">GULF ESCALATION</div>
-      <h1 class="serif">U.S. Strikes Iran Missile Site; Iran Hits Back at U.S. Bases</h1>
-      <div class="sub">U.S. jets bomb a <b>Revolutionary Guards missile launch site on Qeshm Island</b>, at the
-      mouth of the Strait of Hormuz. Tehran answers with <b>drone attacks on U.S. bases in Bahrain and Kuwait</b> —
-      its third strike on Bahrain this week.</div>
+      <div class="map-cap">THE STRAIT OF HORMUZ — GATEWAY TO THE GULF</div>
     </div>
   </div>
 
-  <!-- ================= ROW 2 ================= -->
-  <div class="row2">
-    <div class="panel">
-      <div class="kicker">SHENZHEN · APEC SUMMIT</div>
-      <div class="flags">
-        <div class="flag">
-          <svg width="58" height="58" viewBox="0 0 66 66">
-            <circle cx="33" cy="33" r="31" fill="#d43a2f"/>
-            <path d="M22,18 l3.2,6.6 7.3,1 -5.3,5.1 1.3,7.2 -6.5,-3.4 -6.5,3.4 1.3,-7.2 -5.3,-5.1 7.3,-1 Z" fill="#ffd94d"/>
-            <circle cx="42" cy="20" r="2.2" fill="#ffd94d"/><circle cx="46" cy="27" r="2.2" fill="#ffd94d"/><circle cx="45" cy="35" r="2.2" fill="#ffd94d"/>
-          </svg>
-          <div class="who">XI JINPING</div>
-        </div>
-        <div class="flag">
-          <svg width="58" height="58" viewBox="0 0 66 66">
-            <clipPath id="rc"><circle cx="33" cy="33" r="31"/></clipPath>
-            <g clip-path="url(#rc)">
-              <rect x="2" y="2" width="62" height="21" fill="#f4f1ea"/>
-              <rect x="2" y="23" width="62" height="21" fill="#2c4d9e"/>
-              <rect x="2" y="44" width="62" height="21" fill="#d43a2f"/>
+  <!-- ================= THUMBNAIL GRID ================= -->
+  <div class="grid">
+
+    <div class="grow">
+      <!-- Shenzhen -->
+      <div class="panel">
+        <div class="kicker">SHENZHEN · APEC SUMMIT</div>
+        <div class="thumb">
+          <svg width="301" height="88" viewBox="0 0 301 88">
+            <rect x="0" y="0" width="301" height="88" rx="6" fill="#16324f"/>
+            <!-- China roundel -->
+            <circle cx="55" cy="36" r="25" fill="#d43a2f"/>
+            <path d="M46,24 l2.6,5.3 5.9,.8 -4.3,4.1 1,5.8 -5.2,-2.8 -5.2,2.8 1,-5.8 -4.3,-4.1 5.9,-.8 Z" fill="#ffd94d"/>
+            <circle cx="62" cy="25" r="1.8" fill="#ffd94d"/><circle cx="65" cy="31" r="1.8" fill="#ffd94d"/><circle cx="64" cy="37" r="1.8" fill="#ffd94d"/>
+            <!-- Russia roundel -->
+            <clipPath id="rc2"><circle cx="150" cy="36" r="25"/></clipPath>
+            <g clip-path="url(#rc2)">
+              <rect x="125" y="11" width="50" height="17" fill="#f4f1ea"/>
+              <rect x="125" y="28" width="50" height="17" fill="#2c4d9e"/>
+              <rect x="125" y="45" width="50" height="17" fill="#d43a2f"/>
             </g>
-            <circle cx="33" cy="33" r="31" fill="none" stroke="#c9c2b2" stroke-width="1.5"/>
-          </svg>
-          <div class="who">PUTIN</div>
-        </div>
-        <div class="flag">
-          <svg width="58" height="58" viewBox="0 0 66 66">
-            <clipPath id="uc"><circle cx="33" cy="33" r="31"/></clipPath>
-            <g clip-path="url(#uc)">
-              <rect x="2" y="2" width="62" height="62" fill="#f4f1ea"/>
-              <rect x="2" y="2" width="62" height="9" fill="#b3232a"/><rect x="2" y="20" width="62" height="9" fill="#b3232a"/>
-              <rect x="2" y="38" width="62" height="9" fill="#b3232a"/><rect x="2" y="56" width="62" height="9" fill="#b3232a"/>
-              <rect x="2" y="2" width="30" height="32" fill="#16324f"/>
+            <circle cx="150" cy="36" r="25" fill="none" stroke="#c9c2b2" stroke-width="1.2"/>
+            <!-- US roundel -->
+            <clipPath id="uc2"><circle cx="245" cy="36" r="25"/></clipPath>
+            <g clip-path="url(#uc2)">
+              <rect x="220" y="11" width="50" height="50" fill="#f4f1ea"/>
+              <rect x="220" y="11" width="50" height="7.5" fill="#b3232a"/><rect x="220" y="26" width="50" height="7.5" fill="#b3232a"/>
+              <rect x="220" y="41" width="50" height="7.5" fill="#b3232a"/><rect x="220" y="56" width="50" height="7.5" fill="#b3232a"/>
+              <rect x="220" y="11" width="24" height="26" fill="#16324f"/>
               <g fill="#ffffff">
-                <circle cx="9" cy="9" r="2.1"/><circle cx="17" cy="9" r="2.1"/><circle cx="25" cy="9" r="2.1"/>
-                <circle cx="13" cy="17" r="2.1"/><circle cx="21" cy="17" r="2.1"/>
-                <circle cx="9" cy="25" r="2.1"/><circle cx="17" cy="25" r="2.1"/><circle cx="25" cy="25" r="2.1"/>
+                <circle cx="227" cy="17" r="1.7"/><circle cx="233" cy="17" r="1.7"/><circle cx="239" cy="17" r="1.7"/>
+                <circle cx="230" cy="23" r="1.7"/><circle cx="236" cy="23" r="1.7"/>
+                <circle cx="227" cy="29" r="1.7"/><circle cx="233" cy="29" r="1.7"/><circle cx="239" cy="29" r="1.7"/>
               </g>
             </g>
-            <circle cx="33" cy="33" r="31" fill="none" stroke="#c9c2b2" stroke-width="1.5"/>
+            <circle cx="245" cy="36" r="25" fill="none" stroke="#c9c2b2" stroke-width="1.2"/>
+            <!-- names -->
+            <text x="55" y="78" font-size="12.5" font-weight="bold" fill="#f2ede1" text-anchor="middle" letter-spacing="1">XI JINPING</text>
+            <text x="150" y="78" font-size="12.5" font-weight="bold" fill="#f2ede1" text-anchor="middle" letter-spacing="1">PUTIN</text>
+            <text x="245" y="78" font-size="12.5" font-weight="bold" fill="#f2ede1" text-anchor="middle" letter-spacing="1">TRUMP</text>
           </svg>
-          <div class="who">TRUMP</div>
         </div>
+        <h2 class="serif">Xi, Putin and Trump Converge on Shenzhen</h2>
+        <div class="cap">APEC · THREE-WAY TALKS THURSDAY</div>
       </div>
-      <h2 class="serif">Xi, Putin and Trump Converge on Shenzhen</h2>
-      <div class="sub">China's and Russia's leaders meet, attacking sanctions and protectionism, as Trump lands
-      in China for Thursday's three-way summit.</div>
-    </div>
-    <div class="panel">
-      <div class="kicker">UKRAINE WAR</div>
-      <svg width="440" height="46" viewBox="0 0 440 86">
-        <rect x="0" y="52" width="440" height="34" fill="#b9d0e2"/>
-        <path d="M0,60 q22,-7 44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0" fill="none" stroke="#7ba3c4" stroke-width="2.5"/>
-        <path d="M0,74 q22,-7 44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0 t44,0" fill="none" stroke="#7ba3c4" stroke-width="2.5"/>
-        <!-- piers -->
-        <line x1="60" y1="30" x2="60" y2="58" stroke="#5c5546" stroke-width="6"/>
-        <line x1="180" y1="30" x2="180" y2="58" stroke="#5c5546" stroke-width="6"/>
-        <line x1="330" y1="30" x2="330" y2="58" stroke="#5c5546" stroke-width="6"/>
-        <!-- deck: intact left, broken span, intact right -->
-        <rect x="8" y="22" width="196" height="9" fill="#5c5546"/>
-        <rect x="286" y="22" width="146" height="9" fill="#5c5546"/>
-        <rect x="206" y="30" width="76" height="9" fill="#5c5546" transform="rotate(24 206 30)"/>
-        <!-- blast -->
-        <g stroke="#b3232a" stroke-width="3.5" stroke-linecap="round">
-          <line x1="238" y1="2" x2="238" y2="20"/><line x1="220" y1="8" x2="230" y2="20"/>
-          <line x1="256" y1="8" x2="246" y2="20"/><line x1="214" y1="22" x2="228" y2="24"/>
-          <line x1="262" y1="22" x2="248" y2="24"/>
-        </g>
-        <text x="8" y="14" font-size="15.5" font-weight="bold" fill="#4c463c" letter-spacing="1.5">KERCH BRIDGE</text>
-        <text x="322" y="72" font-size="15" font-weight="bold" fill="#b3232a">SPAN DOWN</text>
-      </svg>
-      <h2 class="serif">Ukraine Strikes the Crimea Bridge Again</h2>
-      <div class="sub">A second day of attacks drops part of the Kerch Bridge's road span into the strait below.</div>
-    </div>
-  </div>
 
-  <!-- ================= ROW 3 ================= -->
-  <div class="row3">
-    <div class="cell">
-      <div class="big navy serif">56–44</div>
-      <h3>DEMOCRATS TAKE THE U.S. SENATE</h3>
-      <div class="sub">Mary Peltola beats Senator Dan Sullivan in Alaska — the party's biggest Senate majority since 2009.</div>
-    </div>
-    <div class="cell">
-      <div class="big red serif">11,000+</div>
-      <h3>EBOLA CASES IN DR CONGO</h3>
-      <div class="sub">More than doubled in three months — the second-largest outbreak on record. Children hit hardest.</div>
-    </div>
-    <div class="cell">
-      <div class="big red serif">5,412</div>
-      <h3>U.S. LOSES MEASLES-FREE STATUS</h3>
-      <div class="sub">Cases in 2026 are the most since 1991, with 10 deaths — ending 26 years of elimination.</div>
-    </div>
-  </div>
+      <!-- Kerch Bridge -->
+      <div class="panel">
+        <div class="kicker">UKRAINE WAR</div>
+        <div class="thumb">
+          <svg width="301" height="88" viewBox="0 0 301 88">
+            <rect x="0" y="0" width="301" height="88" rx="6" fill="#eef2f5"/>
+            <rect x="0" y="56" width="301" height="32" fill="#b9d0e2"/>
+            <path d="M0,64 q19,-6 38,0 t38,0 t38,0 t38,0 t38,0 t38,0 t38,0 t38,0" fill="none" stroke="#7ba3c4" stroke-width="2.5"/>
+            <path d="M0,76 q19,-6 38,0 t38,0 t38,0 t38,0 t38,0 t38,0 t38,0 t38,0" fill="none" stroke="#7ba3c4" stroke-width="2.5"/>
+            <!-- piers -->
+            <line x1="42" y1="34" x2="42" y2="60" stroke="#5c5546" stroke-width="6"/>
+            <line x1="128" y1="34" x2="128" y2="60" stroke="#5c5546" stroke-width="6"/>
+            <line x1="238" y1="34" x2="238" y2="60" stroke="#5c5546" stroke-width="6"/>
+            <!-- deck: intact left, broken span, intact right -->
+            <rect x="6" y="26" width="140" height="9" fill="#5c5546"/>
+            <rect x="212" y="26" width="84" height="9" fill="#5c5546"/>
+            <rect x="148" y="33" width="62" height="9" fill="#5c5546" transform="rotate(26 148 33)"/>
+            <!-- blast -->
+            <g stroke="#b3232a" stroke-width="3.5" stroke-linecap="round">
+              <line x1="172" y1="4" x2="172" y2="20"/><line x1="156" y1="9" x2="166" y2="20"/>
+              <line x1="188" y1="9" x2="178" y2="20"/><line x1="150" y1="22" x2="164" y2="24"/>
+              <line x1="194" y1="22" x2="180" y2="24"/>
+            </g>
+            <text x="8" y="16" font-size="13.5" font-weight="bold" fill="#4c463c" letter-spacing="1.5">KERCH BRIDGE</text>
+            <text x="228" y="80" font-size="13.5" font-weight="bold" fill="#b3232a">SPAN DOWN</text>
+          </svg>
+        </div>
+        <h2 class="serif">Ukraine Strikes the Crimea Bridge Again</h2>
+        <div class="cap">SECOND DAY · ROAD SPAN DOWN</div>
+      </div>
 
-  <!-- ================= VOYAGER ================= -->
-  <div class="voyager">
-    <svg width="196" height="38" viewBox="0 0 196 62">
-      <g fill="#ffffff">
-        <circle cx="14" cy="10" r="1.6"/><circle cx="52" cy="6" r="1.3"/><circle cx="96" cy="12" r="1.5"/>
-        <circle cx="140" cy="5" r="1.2"/><circle cx="178" cy="14" r="1.6"/><circle cx="30" cy="24" r="1.2"/>
-        <circle cx="168" cy="30" r="1.2"/><circle cx="120" cy="22" r="1.1"/><circle cx="70" cy="18" r="1.1"/>
-      </g>
-      <circle cx="18" cy="44" r="8" fill="#7fb2e0"/>
-      <text x="4" y="34" font-size="11.5" font-weight="bold" fill="#cfd9e6">EARTH</text>
-      <line x1="28" y1="42" x2="150" y2="34" stroke="#ffd94d" stroke-width="2" stroke-dasharray="5 5"/>
-      <!-- probe -->
-      <circle cx="162" cy="32" r="7" fill="none" stroke="#f2ede1" stroke-width="2.4"/>
-      <line x1="168" y1="38" x2="182" y2="50" stroke="#f2ede1" stroke-width="2.4"/>
-      <circle cx="160" cy="30" r="2.2" fill="#ffd94d"/>
-    </svg>
-    <div>
-      <h2 class="serif">Voyager 1 Reaches One Light-Day From Earth</h2>
-      <div class="sub">16.1 billion miles out, the NASA probe launched in 1977 is the first human-made object
-      so far that its signal takes a full day to reach home.</div>
+      <!-- Senate -->
+      <div class="panel">
+        <div class="kicker">U.S. POLITICS</div>
+        <div class="thumb">
+          <svg width="301" height="88" viewBox="0 0 301 88">
+            <text x="0" y="20" font-size="14" font-weight="bold" fill="#16324f" letter-spacing="1.5">DEMOCRATS</text>
+            <text x="301" y="20" font-size="14" font-weight="bold" fill="#b3232a" text-anchor="end" letter-spacing="1.5">REPUBLICANS</text>
+            <rect x="0" y="28" width="169" height="36" fill="#16324f"/>
+            <rect x="169" y="28" width="132" height="36" fill="#b3232a"/>
+            <text x="14" y="55" font-size="24" font-weight="bold" fill="#ffffff">56</text>
+            <text x="287" y="55" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="end">44</text>
+            <line x1="0" y1="76" x2="301" y2="76" stroke="#a99f8d" stroke-width="1.5"/>
+            <text x="0" y="87" font-size="11.5" font-weight="bold" fill="#6d6455" letter-spacing="1">SEATS IN THE INCOMING SENATE</text>
+          </svg>
+        </div>
+        <h2 class="serif">Democrats Take the U.S. Senate, 56–44</h2>
+        <div class="cap">ALASKA WIN · BIGGEST SINCE 2009</div>
+      </div>
     </div>
+
+    <div class="grow">
+      <!-- Ebola -->
+      <div class="panel">
+        <div class="kicker">DR CONGO · HEALTH</div>
+        <div class="thumb">
+          <svg width="301" height="88" viewBox="0 0 301 88">
+            <line x1="34" y1="74" x2="292" y2="74" stroke="#a99f8d" stroke-width="2"/>
+            <rect x="52" y="58" width="36" height="16" fill="#d98a8a"/>
+            <rect x="112" y="46" width="36" height="28" fill="#c95a5a"/>
+            <rect x="172" y="30" width="36" height="44" fill="#b3232a"/>
+            <rect x="232" y="10" width="36" height="64" fill="#8f1a20"/>
+            <path d="M44,52 C110,44 190,26 262,8" fill="none" stroke="#8f1a20" stroke-width="3" stroke-dasharray="6 5"/>
+            <path d="M262,8 L248,8 L256,20 Z" fill="#8f1a20"/>
+            <text x="0" y="87" font-size="12.5" font-weight="bold" fill="#6d6455" letter-spacing="1">CASES — DOUBLED IN 3 MONTHS</text>
+          </svg>
+        </div>
+        <h2 class="serif">Ebola Cases Pass 11,000 in DR Congo</h2>
+        <div class="cap">SECOND-LARGEST OUTBREAK EVER</div>
+      </div>
+
+      <!-- Measles -->
+      <div class="panel">
+        <div class="kicker">U.S. HEALTH</div>
+        <div class="thumb">
+          <svg width="301" height="88" viewBox="0 0 301 88">
+            <g transform="rotate(-6 150 44)">
+              <rect x="52" y="14" width="196" height="60" fill="none" stroke="#b3232a" stroke-width="3.5"/>
+              <rect x="58" y="20" width="184" height="48" fill="none" stroke="#b3232a" stroke-width="1.5"/>
+              <text x="150" y="44" font-size="19" font-weight="bold" fill="#b3232a" text-anchor="middle" letter-spacing="1.5">MEASLES-FREE</text>
+              <text x="150" y="64" font-size="14.5" font-weight="bold" fill="#b3232a" text-anchor="middle" letter-spacing="2">STATUS ENDED</text>
+            </g>
+          </svg>
+        </div>
+        <h2 class="serif">U.S. Loses Its Measles-Free Status</h2>
+        <div class="cap">5,412 CASES IN 2026 · 10 DEATHS</div>
+      </div>
+
+      <!-- Voyager -->
+      <div class="panel">
+        <div class="kicker">SPACE · NASA</div>
+        <div class="thumb">
+          <svg width="301" height="88" viewBox="0 0 301 88">
+            <rect x="0" y="0" width="301" height="88" rx="6" fill="#101d2e"/>
+            <g fill="#ffffff">
+              <circle cx="30" cy="14" r="1.6"/><circle cx="86" cy="8" r="1.3"/><circle cx="150" cy="16" r="1.5"/>
+              <circle cx="214" cy="9" r="1.2"/><circle cx="272" cy="18" r="1.6"/><circle cx="52" cy="30" r="1.2"/>
+              <circle cx="258" cy="36" r="1.2"/><circle cx="186" cy="28" r="1.1"/><circle cx="112" cy="24" r="1.1"/>
+              <circle cx="24" cy="66" r="1.2"/><circle cx="290" cy="70" r="1.3"/>
+            </g>
+            <circle cx="26" cy="52" r="9" fill="#7fb2e0"/>
+            <text x="26" y="76" font-size="11" font-weight="bold" fill="#cfd9e6" text-anchor="middle">EARTH</text>
+            <line x1="38" y1="50" x2="238" y2="40" stroke="#ffd94d" stroke-width="2" stroke-dasharray="5 5"/>
+            <!-- probe -->
+            <circle cx="252" cy="38" r="8" fill="none" stroke="#f2ede1" stroke-width="2.4"/>
+            <line x1="258" y1="44" x2="274" y2="58" stroke="#f2ede1" stroke-width="2.4"/>
+            <circle cx="250" cy="36" r="2.4" fill="#ffd94d"/>
+            <text x="262" y="76" font-size="11" font-weight="bold" fill="#cfd9e6" text-anchor="middle">VOYAGER 1</text>
+          </svg>
+        </div>
+        <h2 class="serif">Voyager 1 Reaches One Light-Day</h2>
+        <div class="cap">16.1BN MILES · SIGNAL TAKES 24H</div>
+      </div>
+    </div>
+
   </div>
 
   <div class="footer">REPORTED BY REUTERS · ASSOCIATED PRESS · AFP · NASA · THE UNITED NATIONS</div>
